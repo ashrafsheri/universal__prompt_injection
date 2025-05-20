@@ -74,7 +74,7 @@ def get_args():
     parser.add_argument("--target", type=int, default=0)
     parser.add_argument("--model", type=str, default="llama2")
     parser.add_argument("--evaluate", type=str, default="duplicate_sentence_detection")
-    parser.add_argument("--dataset_path", type=str, default="./kaggle/working/universal__prompt_injection/data/")
+    parser.add_argument("--dataset_path", type=str, default="./universal__prompt_injection/data/")
     parser.add_argument("--path", type=str, default="")
     parser.add_argument("--injection", type=str, default="static")
 
