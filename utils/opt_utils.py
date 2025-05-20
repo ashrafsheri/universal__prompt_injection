@@ -265,7 +265,8 @@ def get_nonascii_toks(tokenizer, device='cpu'):
 
 def load_model_and_tokenizer(model_path, low_cpu_mem_usage=True, use_cache=True, device="cpu"):
     # Load tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(model_path, padding_side="left")
+    tokenizer = AutoTokenizer.from_pretrained(model_path, padding_side="left", use_fast=False)
+
     # Add padding token if not set
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
